@@ -7,27 +7,7 @@
 							<a href="#">
 								<img :src="require(`@/assets/images/${client.imgPath}`)" alt="brand-image">
 							</a>
-						</div><!--/.item-->
-<!--						<div class="item">-->
-<!--							<a href="#">-->
-<!--								<img src="../../src/assets/images/clients/c2.png" alt="brand-image" />-->
-<!--							</a>-->
-<!--						</div>&lt;!&ndash;/.item&ndash;&gt;-->
-<!--						<div class="item">-->
-<!--							<a href="#">-->
-<!--								<img src="../../src/assets/images/clients/c3.png" alt="brand-image" />-->
-<!--							</a>-->
-<!--						</div>&lt;!&ndash;/.item&ndash;&gt;-->
-<!--						<div class="item">-->
-<!--							<a href="#">-->
-<!--								<img src="../../src/assets/images/clients/c4.png" alt="brand-image" />-->
-<!--							</a>-->
-<!--						</div>&lt;!&ndash;/.item&ndash;&gt;-->
-<!--						<div class="item">-->
-<!--							<a href="#">-->
-<!--								<img src="../../src/assets/images/clients/c5.png" alt="brand-image" />-->
-<!--							</a>-->
-<!--						</div>&lt;!&ndash;/.item&ndash;&gt;-->
+						</div>
 					</div><!--/.owl-carousel-->
 
 			</div><!--/.container-->

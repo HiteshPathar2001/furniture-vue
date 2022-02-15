@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Header />
     <PopularProducts />
     <NewArrivals />
     <SofaCollection />
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import Header from './components/Header.vue'
 import PopularProducts from './components/PopularProducts.vue'
 import Footer from './components/Footer.vue'
 import NewArrivals from './components/NewArrivals.vue'
@@ -27,7 +27,7 @@ import test from './components/test.vue'
 export default {
   name: 'App',
   components: {
-    Navbar,
+    Header,
     PopularProducts,
     Footer,
     NewArrivals,

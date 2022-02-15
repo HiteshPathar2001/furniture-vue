@@ -64,7 +64,7 @@
 								</div><!--/.hm-foot-para-->
 								<div class="hm-foot-email">
 									<div class="foot-email-box">
-										<input type="text" class="form-control" placeholder="Enter Email Here....">
+										<input class="form-control" placeholder="Enter Email Here....">
 									</div><!--/.foot-email-box-->
 									<div class="foot-email-subscribe">
 										<span><i class="fa fa-location-arrow"></i></span>
@@ -84,7 +84,7 @@
 
 <script>
 export default {
-  
+
 }
 </script>
 

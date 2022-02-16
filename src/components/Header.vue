@@ -93,13 +93,13 @@
                         <div class="top-search" :style="search">
                             <div class="container">
                                 <div class="input-group">
-                           <span class="input-group-addon"
-                           ><i class="fa fa-search"></i
-                           ></span>
+                                   <span class="input-group-addon">
+                                       <i class="fa fa-search"></i>
+                                   </span>
                                     <input type="text" class="form-control" placeholder="Search"/>
-                                    <span class="input-group-addon close-search" @click="show"
-                                    ><i class="fa fa-times"></i
-                                    ></span>
+                                    <span class="input-group-addon close-search" @click="show">
+                                        <i class="fa fa-times"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -110,13 +110,13 @@
                             <div class="attr-nav">
                                 <ul>
                                     <li class="search">
-                                        <a href="#" @click="show"
-                                        ><span class="lnr lnr-magnifier"></span
-                                        ></a>
+                                        <a href="#" @click="show">
+                                            <span class="lnr lnr-magnifier"></span>
+                                        </a>
                                     </li>
                                     <!--/.search-->
                                     <li class="nav-setting">
-                                        <a href="#blog"  v-smooth-scroll><span class="lnr lnr-cog"></span></a>
+                                        <a href="#"><span class="lnr lnr-cog"></span></a>
                                     </li>
                                     <!--/.search-->
                                     <li class="dropdown">
@@ -201,8 +201,8 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
                                 <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                                    <li class="scroll" v-for="(menu, key) in menus" :key="key" v-bind:class="{ active: isActive }" v-on:click="myFilter">
-                                        <a :href="menu.path"  v-smooth-scroll>{{ menu.name }}</a>
+                                    <li v-for="(menu, key) in menus" :key="key">
+                                        <a :href="menu.path"  v-smooth-scroll="{ duration: 600}">{{ menu.name | capitalize}}</a>
                                     </li>
                                 </ul>
                                 <!--/.nav -->
@@ -225,9 +225,9 @@
 
 <script>
     import {Carousel, Slide} from "vue-carousel";
-    import HeaderMix from '../mixins/HeaderMix.js';
+    import {navigation} from '../mixins/Common.js';
     export default {
-        mixins:[HeaderMix],
+        mixins:[navigation],
         components: {
             Carousel,
             Slide,
@@ -236,77 +236,39 @@
             return {
                 search: "display:none",
                 scrollPosition: null,
-                menus: [
-                    {
-                        name: "home",
-                        path: "#home",
-                    },
-                    {
-                        name: "new arrival",
-                        path: "#new-arrivals",
-                    },
-                    {
-                        name: "features",
-                        path: "#feature",
-                    },
-                    {
-                        name: "blog",
-                        path: "#blog",
-                    },
-                    {
-                        name: "contact",
-                        path: "#newsletter",
-                    },
-                ],
-                chairs: [
-                    {
-                        name: "cloth covered accent chair",
-                        desc:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiuiana Smod Tempor Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip.",
-                        imagepath: "slider1.png",
-                        mainPrice:"399",
-                        price:"499"
-                    },
-                    {
-                        name: "Mapple Wood Accent Chair",
-                        desc:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiuiana Smod Tempor Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip.",
-                        imagepath: "slider2.png",
-                        mainPrice:"299",
-                        price:"399"
-                    },
-                    {
-                        name: "Valvet Accent Arm Chair",
-                        desc:"Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiuiana Smod Tempor Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip.",
-                        imagepath: "slider3.png",
-                        mainPrice:"199",
-                        price:"299"
-                    },
-                ],
                 isActive: false,
                 value: 1,
             };
         },
-        // methods: {
-        //     show() {
-        //         if (this.search == "display:none") {
-        //             this.search = "display:block";
-        //         } else {
-        //             this.search = "display:none";
-        //         }
-        //     },
-        //     myFilter: function () {
-        //         this.isActive = !this.isActive;
-        //     },
-        //     updateScroll() {
-        //         this.scrollPosition = window.scrollY;
-        //     },
-        // },
-        // mounted() {
-        //     window.addEventListener("scroll", this.updateScroll);
-        // },
+        methods: {
+            show() {
+                if (this.search == "display:none") {
+                    this.search = "display:block";
+                } else {
+                    this.search = "display:none";
+                }
+            },
+            updateScroll() {
+                this.scrollPosition = window.scrollY;
+            },
+        },
+        mounted() {
+            window.addEventListener("scroll", this.updateScroll);
+        },
+        filters: {
+            capitalize: function (value) {
+                if (!value) return ''
+                value = value.toString()
+                return value.charAt(0).toUpperCase() + value.slice(1)
+            }
+        }
     };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .single-welcome-hero {
+        height: auto;
+        margin-top: 200px;
+    }
 </style>

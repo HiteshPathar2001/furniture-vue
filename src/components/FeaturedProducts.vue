@@ -33,36 +33,10 @@
 </template>
 
 <script>
+    import {featuredProducts} from "../mixins/Common";
+
     export default {
-        props: {
-            product: String
-        },
-        data() {
-            return {
-                products: [
-                    {
-                        name: "Designed Sofa",
-                        price: "$160",
-                        imgPath: "features/f1.jpg"
-                    },
-                    {
-                        name: "Dining Table",
-                        price: "$200",
-                        imgPath: "features/f2.jpg"
-                    },
-                    {
-                        name: "Chair And Table",
-                        price: "$200",
-                        imgPath: "features/f3.jpg"
-                    },
-                    {
-                        name: "Modern Arm Chair",
-                        price: "$200",
-                        imgPath: "features/f4.jpg"
-                    },
-                ]
-            }
-        }
+        mixins : [featuredProducts],
     }
 </script>
 

@@ -17,28 +17,10 @@
 </template>
 
 <script>
-export default {
-	data () {
-		return {
-			clients : [
-				{
-					imgPath : "clients/c1.png",
-				},
-				{
-					imgPath : "clients/c2.png",
-				},
-				{
-					imgPath : "clients/c3.png",
-				},
-				{
-					imgPath : "clients/c4.png",
-				},
-				{
-					imgPath : "clients/c5.png",
-				},
-			]
-		}
-	}
+	import {clients} from "../mixins/Common";
+
+	export default {
+		mixins: [clients],
 }
 </script>
 

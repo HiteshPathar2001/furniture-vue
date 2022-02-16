@@ -41,65 +41,10 @@
 </template>
 
 <script>
+    import {newArrivals} from "../mixins/Common";
+
     export default {
-        props: {
-            item: String
-        },
-        name: 'NewArrivals',
-        data () {
-            return {
-                items: [
-                    {
-                        img:'collection/arrivals1.png',
-                        name: "Wooden Chair",
-                        price: "$65",
-                        myClass  : "sale bg-1"
-                    },
-                    {
-                        img: "collection/arrivals2.png",
-                        name: "Single Armchair",
-                        price: "$80",
-                        myClass  : "sale bg-2"
-                    },
-                    {
-                        img: "collection/arrivals3.png",
-                        name: "Wooden Armchair",
-                        price: "$40",
-                        myClass  : ""
-                    },
-                    {
-                        img: "collection/arrivals4.png",
-                        name: "Stylish Chair",
-                        price: "$100",
-                        myClass  : "sale bg-1"
-                    },
-                    {
-                        img: "collection/arrivals5.png",
-                        name: "Modern Chair",
-                        price: "$120",
-                        myClass  : ""
-                    },
-                    {
-                        img: "collection/arrivals6.png",
-                        name: "Mapple Wood Dinning Table",
-                        price: "$140",
-                        myClass  : "sale bg-1"
-                    },
-                    {
-                        img: "collection/arrivals7.png",
-                        name: "Arm Chair",
-                        price: "$90",
-                        myClass  : "sale bg-2"
-                    },
-                    {
-                        img: "collection/arrivals8.png",
-                        name: "Wooden Bad",
-                        price: "$140",
-                        myClass  : "sale bg-1"
-                    },
-                ]
-            }
-        }
+        mixins : [newArrivals],
     }
 </script>
 

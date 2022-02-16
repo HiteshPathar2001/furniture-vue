@@ -31,31 +31,10 @@
 </template>
 
 <script>
+    import {blogs} from "../mixins/Common";
+
     export default {
-        data() {
-            return {
-                blogs: [
-                    {
-                        title: "Why Brands are Looking at Local Language",
-                        author: "By Robert Norby / 18th March 2018",
-                        desc: "Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia Consequuntur Magni Dolores Eos Qui Ratione Voluptatem Sequi Nesciunt....",
-                        imgPath: "blog/b1.jpg",
-                    },
-                    {
-                        title: "Why Brands are Looking at Local Language",
-                        author: "By Robert Norby / 18th March 2018",
-                        desc: "Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia Consequuntur Magni Dolores Eos Qui Ratione Voluptatem Sequi Nesciunt....",
-                        imgPath: "blog/b2.jpg",
-                    },
-                    {
-                        title: "Why Brands are Looking at Local Language",
-                        author: "By Robert Norby / 18th March 2018",
-                        desc: "Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia Consequuntur Magni Dolores Eos Qui Ratione Voluptatem Sequi Nesciunt....",
-                        imgPath: "blog/b3.jpg",
-                    },
-                ]
-            }
-        }
+        mixins : [blogs],
     }
 </script>
 

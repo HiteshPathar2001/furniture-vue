@@ -204,6 +204,7 @@
                                     <li v-for="(menu, key) in menus" :key="key">
                                         <a :href="menu.path"  v-smooth-scroll="{ duration: 600}">{{ menu.name | capitalize}}</a>
                                     </li>
+                                    <router-link to="/blogcontent">Blog</router-link>
                                 </ul>
                                 <!--/.nav -->
                             </div>
